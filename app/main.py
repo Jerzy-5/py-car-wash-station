@@ -23,7 +23,7 @@ class CarWashStation:
         self.clean_power: int = clean_power
         self.average_rating: float = average_rating
         self.count_of_ratings: int = count_of_ratings
-        self.income: float = 0.0
+
 
     def wash_single_car(self, car: Car) -> None:
         """
@@ -55,11 +55,12 @@ class CarWashStation:
         the clean_power of the wash station, and returns total income rounded
         to 1 decimal.
         """
+        total_income = 0.0
         for car in cars:
             if car.clean_mark < self.clean_power:
-                self.income += self.calculate_washing_price(car)
+                total_income += self.calculate_washing_price(car)
                 self.wash_single_car(car)
-        return round(self.income, 1)
+        return round(total_income, 1)
 
     def rate_service(self, rate: float) -> None:
         """
