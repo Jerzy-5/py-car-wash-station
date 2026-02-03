@@ -2,8 +2,8 @@ from typing import List
 
 
 class Car:
-    def __init__(self, comfort_class: int,
-                 clean_mark: int, brand: str) -> None:
+    def __init__(self, comfort_class: int, clean_mark: int,
+                 brand: str) -> None:
         self.comfort_class: int = comfort_class
         self.clean_mark: int = clean_mark
         self.brand: str = brand
@@ -24,12 +24,7 @@ class CarWashStation:
         self.average_rating: float = average_rating
         self.count_of_ratings: int = count_of_ratings
 
-
     def wash_single_car(self, car: Car) -> None:
-        """
-        Wash a single car. If the wash station's clean_power is greater than
-        the car's clean_mark, sets car.clean_mark equal to clean_power.
-        """
         if self.clean_power > car.clean_mark:
             car.clean_mark = self.clean_power
 
