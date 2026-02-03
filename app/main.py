@@ -34,7 +34,7 @@ class CarWashStation:
         Formula:
         comfort_class * (clean_power - car.clean_mark) * average_rating /
         distance_from_city_center
-        Returns rounded result (1 decimal).
+        Returns rouded result (1 decimal).
         """
         price = (
             car.comfort_class
